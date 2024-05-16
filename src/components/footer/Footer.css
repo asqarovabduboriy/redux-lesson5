@@ -1,0 +1,14 @@
+footer{
+    background-color:#cccfff;
+    margin-top: 40px;
+}
+
+.one_text_footer{
+    padding: 74px 0 112px 0;
+}
+
+.one_text_footer p{
+    font-size: 20px;
+    width: 186px;
+    margin-left: 10px
+}
