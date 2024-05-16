@@ -18,22 +18,13 @@ const Single = () => {
               <img src={data?.images[0]} alt={data?.title} />
             </div>
             <div className="small_img">
-              <div className="small_img_wrapper">
-                <img src={data?.images[1]} alt="" />
-              </div>
-              <div className="small_img_wrapper">
-                <img src={data?.images[2]} alt="" />
-              </div>
-              <div className="small_img_wrapper">
-                <img src={data?.images[3]} alt="" />
-              </div>
-              {data?.images[4] ? (
-                <div className="small_img_wrapper">
-                  <img src={data?.images[4]} alt="" />
+              {
+                data?.images.map((el, index) => (
+                  <div className="small_img_wrapper" key={index}>
+                  <img src={el} alt="" />
                 </div>
-              ) : (
-                <></>
-              )}
+                ))
+              }
             </div>
           </div>
 
@@ -67,8 +58,6 @@ const Single = () => {
       </div>
       </>
     )
-  }else{
-    console.log('err');
   }
 
   return (
