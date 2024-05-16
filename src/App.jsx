@@ -7,6 +7,9 @@ import Single from "./page/single/Single";
 import Cart from "./page/Cart/Cart";
 import Wishlist from "./page/wishlist/Wishlist";
 import Footer from "./components/footer/Footer";
+import Contact from "./page/contact/Contact";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -14,11 +17,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="/product/:id" element={<Single/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path='/wishlist' element={<Wishlist/>} />
       </Routes>
       <Footer/>
+      <ToastContainer />
     </>
   );
 }
